@@ -1,0 +1,25 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "This project uses express to gather user input and pair them with another \"friend.\" The challenge with this project was coordinating each person to match with another. I had to diagram the logic out several times.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niquewill/FriendFinder.git"
+  },
+  "author": "Monique Hawkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niquewill/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/niquewill/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "path": "^0.12.7"
+  }
+}
