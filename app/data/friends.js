@@ -17,7 +17,7 @@ var homies = [{
     ]
     
 }, {
-        name: "Willie",
+    name: "Willie",
     photo: "http://2.bp.blogspot.com/-U4hnJNOXkiw/T6DVMZdjPmI/AAAAAAAAF5U/2RHnzgSdB0w/s1600/pimp.jpg",
     bull: [
       2, 
@@ -35,7 +35,7 @@ var homies = [{
 }, {
     
     name: "Wayne",
-    photo: "http://www.sohh.com/wp-content/uploads/lil-wayne-2015-03-12.png"
+    photo: "http://www.sohh.com/wp-content/uploads/lil-wayne-2015-03-12.png",
     bull: [
     0,
     2,
@@ -48,7 +48,7 @@ var homies = [{
     1,
     3
     ]
-    
+}, {
     name: "Nacho",
     photo: "http://5.darkroom.shortlist.com/980/acf093cbc24a6c2e6347af82f3a452be:ea2a7a60fcd0156ef87daa85cf19dcca/jack-black",
     bull: [
