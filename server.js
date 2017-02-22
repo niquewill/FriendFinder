@@ -2,9 +2,17 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-
 //Express configuration
 var app = express();
+
+//Body parser setup
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type:'application/vnd.api +json'}));
+app.use(express.static('app'));
+
+
 //http://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js
 var PORT = process.env.PORT || 3000;
 
@@ -16,12 +24,6 @@ var apiRoutes = require("./app/routing/apiRoutes.js");
 //app.use(express.static(__dirname + "/app/public"));
 
 
-//Body parser setup
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type:'application/vnd.api +json'}));
-app.use(express.static('app'));
 
 //Router
 var api = require('./app/routing/apiRoutes.js');
