@@ -13,9 +13,9 @@ Create button to sumbit the form.
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <!-- Font Awesome Glyphicons -->
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-        <!-- Chosen -->
+  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 </head>
@@ -169,11 +169,12 @@ Create button to sumbit the form.
 		<hr>
 
 	</div>
-<!--//Didnt want the user to be able to run through form without sumbtting data.  Answer modal dialog.-->
+<!--//Didnt want the user to be able to run through form without submitting data.  Answer modal dialog.-->
 	<!-- Modal -->
 	<div id="resultsModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
-	    <!-- Modal content-->
+	    
+          <!-- Modal content-->
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -184,7 +185,8 @@ Create button to sumbit the form.
                 <img id="matchImg" alt="">
             </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Clos
+            </button>
 	      </div>
 	    </div>
 
@@ -228,14 +230,14 @@ Create button to sumbit the form.
 	    		scores: [
                     $("#q1").val(), 
                     $("#q2").val(), 
-//                    $("#quest3").val(), 
-//                    $("#quest4").val(), 
-//                    $("#quest5").val(), 
-//                    $("#quest6").val(), 
-//                    $("#quest7").val(), 
-//                    $("#quest8").val(), 
-//                    $("#quest9").val(), 
-//                    $("#quest10").val(), 
+                    $("#q3").val(), 
+                    $("#q4").val(), 
+                    $("#q5").val(), 
+                    $("#q6").val(), 
+                    $("#q7").val(), 
+                    $("#q8").val(), 
+                    $("#q9").val(), 
+                    $("#q10").val(), 
                 ]
 	    	};
 	    	// Grab the URL of the website
@@ -243,7 +245,7 @@ Create button to sumbit the form.
 	    	// AJAX post the data to the friends API. 
             //console.log(userData);
 	    	$.post("/api/friends", userData, function(data){
-                console.log(data);
+                //console.log(data);
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
@@ -253,18 +255,9 @@ Create button to sumbit the form.
 		}
 		else
 		{
-			alert("Do you not want a hook-up, complete the form please!");
+			alert("Do you not want a hook-up? Complete the form please!");
 		}
     	
-    	return false;
     });
-  </script>
-        <hr>
-	    <footer class="footer">
-	      <div class="container">
-		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/niquewill">GitHub Repositories</a></p>
-	      </div>
-	    </footer>
-
 </body>
 </html>
